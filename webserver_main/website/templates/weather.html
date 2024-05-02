@@ -1,0 +1,53 @@
+{% extends "base.html" %} {% block title %}Weather{% endblock %}
+
+{% block content%}
+<h1 align="center">Weather</h1>
+</br>
+<div align="center">
+    {%if weather%}
+    <div class="split-background">
+      <div class="temperature-half">
+          <h2>Temperature(°C):
+            {%if weather.temperature%}
+              <h2 id="temperatureDate">{{weather.temperatureDate}}</h2>
+              <h2 id="temperature">{{weather.temperature}}</h2>
+            {%else%}
+              <h2 id="temperatureDate"></h2>
+              <h2 id="temperature">Unavailable</h2>
+            {%endif%}
+        </h2>
+          </br>
+          <h2>Mean Temperature(°C):
+            {%if weather.meanTemperature%}
+              <h2 id="meanTemperature">{{weather.meanTemperature}}</h2>
+            {%else%}
+              <h2 id="meanTemperature">Unavailable</h2>
+            {%endif%}
+          </h2>
+          </div>
+          </br>
+        <div class="humidity-half">
+          <h2>Humidity(%):
+            {%if weather.humidity%}
+              <h2 id="humidityDate">{{weather.humidityDate}}</h2>
+              <h2 id="humidity">{{weather.humidity}}</h2>
+            {%else%}
+              <h2 id="humidityDate"></h2>
+              <h2 id="humidity">Unavailable</h2>
+            {%endif%}
+          </h2>
+          </br>
+          <h2>Mean Humidity(%):
+            {%if weather.meanHumidity%}
+              <h2 id="meanHumidity">{{weather.meanHumidity}}</h2>
+            {%else%}
+              <h2 id="meanHumidity">Unavailable</h2>
+            {%endif%}
+          </h2>
+        </div>
+    </div>
+    {%else%}
+      No weather data found
+    {%endif%}
+</div>
+{% endblock %}

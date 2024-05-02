@@ -1,0 +1,15 @@
+/* Apply a background color tto the temperature-half*/
+.temperature-half {
+    background-color: None;
+    height: 50%;
+    width: 100%;
+    float: top; 
+}
+
+/* Apply a background color to the humidity-half */
+.humidity-half {
+    background-color: None; 
+    height: 50%;
+    width: 100%;
+    float: bottom;
+}
